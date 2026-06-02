@@ -1,0 +1,42 @@
+<nav class="nav" id="nav" aria-label="Main navigation">
+  <div class="container">
+    <div class="nav__inner">
+      <div style="display:flex; align-items:center; gap: 0.75rem;">
+        <a href="../index.html" class="nav__link" style="font-size:0.75rem; opacity:0.5; letter-spacing:0.03em;" aria-label="Back to McCoidco Apps">← McCoidco</a>
+        <span style="opacity:0.2; font-size:0.75rem;">|</span>
+        <a href="index.html" class="nav__brand" aria-label="LAABS Audio home">
+          <img src="assets/images/laabs-icon.png" alt="LAABS Audio icon" class="nav__icon" />
+          LAABS Audio
+        </a>
+      </div>
+
+      <ul class="nav__links" role="list">
+        <li><a href="index.html#features" class="nav__link" id="nav-link-features">Features</a></li>
+        <li><a href="index.html#screenshots" class="nav__link" id="nav-link-screenshots">Screenshots</a></li>
+        <li><a href="docs.html" class="nav__link" id="nav-link-docs">Documentation</a></li>
+      </ul>
+
+      <!-- TODO: Replace href="#" with App Store URL when available -->
+      <a href="#" class="btn btn--primary nav__cta" id="nav-appstore-btn" aria-label="Download LAABS Audio on the App Store">
+        Download
+      </a>
+
+      <button class="nav__hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="nav__mobile-menu" id="mobile-menu" role="dialog" aria-label="Navigation menu">
+    <a href="index.html#features" class="nav__mobile-link" data-mobile-link id="mobile-link-features">Features</a>
+    <a href="index.html#screenshots" class="nav__mobile-link" data-mobile-link id="mobile-link-screenshots">Screenshots</a>
+    <a href="docs.html" class="nav__mobile-link" data-mobile-link id="mobile-link-docs">Documentation</a>
+    <a href="../index.html" class="nav__mobile-link" data-mobile-link>← McCoidco Apps</a>
+    <!-- TODO: Replace href="#" with App Store URL -->
+    <a href="#" class="btn btn--primary btn--lg" id="mobile-appstore-btn">Download on the App Store</a>
+  </div>
+</nav>
+

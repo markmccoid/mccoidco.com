@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LAABS Audio — A Better iPhone App for Your Audiobookshelf Library</title>
+  <meta name="description" content="LAABS Audio is a premium iPhone audiobook app for people who run their own Audiobookshelf server. Stream, download, clip, bookmark, and listen with ambient audio." />
+  <meta name="keywords" content="Audiobookshelf, iPhone audiobook app, self-hosted audiobooks, audiobook player, LAABS Audio" />
+  <meta property="og:title" content="LAABS Audio — A Better iPhone App for Your Audiobookshelf Library" />
+  <meta property="og:description" content="Connect to your Audiobookshelf server. Stream or download. Clip, bookmark, organize. A more personal listening experience on your iPhone." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/HERO_HOME_BOOKSHELVES.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#0d2015" />
+  <link rel="icon" type="image/png" href="assets/images/laabs-icon.png" />
+  <link rel="stylesheet" href="styles/tokens.css" />
+  <link rel="stylesheet" href="styles/base.css" />
+  <link rel="stylesheet" href="styles/components.css" />
+  <link rel="stylesheet" href="styles/sections.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     NAVIGATION
+═══════════════════════════════════════════ -->
+<header id="site-header"></header>
+
+
+<!-- ═══════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════ -->
+<main>
+  <section class="hero band--dark" aria-labelledby="hero-headline">
+    <div class="container">
+      <div class="hero__inner">
+
+        <!-- Left: Copy -->
+        <div class="hero__content">
+          <div class="hero__eyebrow reveal">
+            <span class="hero__eyebrow-dot" aria-hidden="true"></span>
+            For Audiobookshelf listeners
+          </div>
+
+          <h1 class="hero__headline reveal reveal-delay-1" id="hero-headline">
+            A better iPhone app for your<em> Audiobookshelf</em> library.
+          </h1>
+
+          <p class="hero__subhead reveal reveal-delay-2">
+            Connect to your own Audiobookshelf server. Stream or download books. Sync progress, organize with custom shelves, clip passages, add ambient audio, and listen offline.
+          </p>
+
+          <div class="hero__actions reveal reveal-delay-3">
+            <!-- TODO: Replace href="#" with real App Store URL -->
+            <a href="#" class="btn btn--store btn--lg" id="hero-appstore-btn" aria-label="Download LAABS Audio on the App Store">
+              <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <span class="btn__store-text">
+                <span class="btn__store-label">Download on the</span>
+                <span class="btn__store-name">App Store</span>
+              </span>
+            </a>
+
+            <a href="docs.html" class="btn btn--ghost btn--lg" id="hero-docs-btn">
+              Read the Docs
+            </a>
+          </div>
+
+          <p class="hero__requirement reveal reveal-delay-4">
+            Requires Audiobookshelf server v2.3.0+
+          </p>
+        </div>
+
+        <!-- Right: Phone composition -->
+        <div class="hero__visual reveal reveal-delay-2" aria-hidden="true">
+          <div class="hero__phone-stack">
+            <!-- Tertiary (back-left) -->
+            <div class="hero__phone-tertiary">
+              <div class="phone-frame__shell">
+                <div class="phone-frame__island"></div>
+                <img
+                  src="assets/images/BOOKSHELF_SETTINGS_REORDER.png"
+                  alt=""
+                  class="phone-frame__screen"
+                  loading="eager"
+                  width="300" height="600"
+                />
+              </div>
+            </div>
+
+            <!-- Primary (front) -->
+            <div class="hero__phone-primary">
+              <div class="phone-frame__shell">
+                <div class="phone-frame__island"></div>
+                <img
+                  src="assets/images/HERO_HOME_BOOKSHELVES.png"
+                  alt="LAABS Audio home screen showing custom bookshelves"
+                  class="phone-frame__screen"
+                  loading="eager"
+                  width="300" height="640"
+                />
+              </div>
+            </div>
+
+            <!-- Secondary (back-right) -->
+            <div class="hero__phone-secondary">
+              <div class="phone-frame__shell">
+                <div class="phone-frame__island"></div>
+                <img
+                  src="assets/images/PLAYER_AMBIENT_PICKER.png"
+                  alt=""
+                  class="phone-frame__screen"
+                  loading="eager"
+                  width="300" height="640"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="gradient-divider"></div>
+
+
+  <!-- ═══════════════════════════════════════════
+       FEATURES
+  ═══════════════════════════════════════════ -->
+  <section class="features-section section band--light-2" id="features" aria-labelledby="features-heading">
+    <div class="container">
+
+      <div class="section-heading reveal">
+        <span class="section-heading__eyebrow">Everything you need</span>
+        <h2 class="section-heading__title" id="features-heading">Built for serious listeners.</h2>
+        <p class="section-heading__subtitle">
+          Your Audiobookshelf server stays in control of the library.
+          LAABS Audio adds the mobile experience around it.
+        </p>
+      </div>
+
+      <div class="features-grid">
+
+        <!-- 1. Audiobookshelf Connection -->
+        <article class="feature-card reveal" id="feat-connection">
+          <span class="feature-card__number" aria-hidden="true">01</span>
+          <p class="feature-card__eyebrow">Foundation</p>
+          <h3 class="feature-card__title">Connects to Audiobookshelf</h3>
+          <p class="feature-card__desc">
+            Sign in to your own server. Stream from anywhere, download for offline listening, and keep your progress synced automatically.
+          </p>
+          <ul class="feature-card__list" role="list">
+            <li class="feature-card__item">Stream audiobooks directly from your server</li>
+            <li class="feature-card__item">Download books and cover art for local playback</li>
+            <li class="feature-card__item">Sync listening progress back to Audiobookshelf</li>
+            <li class="feature-card__item">Switch between multiple Audiobookshelf libraries</li>
+            <li class="feature-card__item">See clearly whether you're streaming or playing locally</li>
+          </ul>
+          <span class="feature-card__badge">Requires server v2.3.0+</span>
+        </article>
+
+        <!-- 2. Home Bookshelves -->
+        <article class="feature-card feature-card--accent reveal reveal-delay-1" id="feat-home">
+          <span class="feature-card__number" aria-hidden="true">02</span>
+          <p class="feature-card__eyebrow">Home Screen</p>
+          <h3 class="feature-card__title">Built around bookshelves</h3>
+          <p class="feature-card__desc">
+            A visual home screen organized by shelves — not a flat list. The books you want are always close.
+          </p>
+          <ul class="feature-card__list" role="list">
+            <li class="feature-card__item">Continue Listening for books in progress</li>
+            <li class="feature-card__item">Recently Added from your Audiobookshelf library</li>
+            <li class="feature-card__item">Discover for a refreshed selection of unread books</li>
+            <li class="feature-card__item">Cover art, progress, favorites, and offline indicators</li>
+          </ul>
+        </article>
+
+        <!-- 3. Custom Shelves -->
+        <article class="feature-card reveal reveal-delay-2" id="feat-shelves">
+          <span class="feature-card__number" aria-hidden="true">03</span>
+          <p class="feature-card__eyebrow">Organization</p>
+          <h3 class="feature-card__title">Custom shelves & playlists</h3>
+          <p class="feature-card__desc">
+            Shape the Home screen around your listening life. Create shelves for bedtime reading, a long series, research, or anything else that matters to you.
+          </p>
+          <ul class="feature-card__list" role="list">
+            <li class="feature-card__item">Show, hide, and drag shelves to reorder</li>
+            <li class="feature-card__item">Device-only shelves stored locally on your iPhone</li>
+            <li class="feature-card__item">Display Audiobookshelf playlists as Home shelves</li>
+            <li class="feature-card__item">Create playlist-style shelves that sync back to Audiobookshelf</li>
+          </ul>
+        </article>
+
+        <!-- 4. Progress Toggle -->
+        <article class="feature-card feature-card--accent reveal" id="feat-progress">
+          <span class="feature-card__number" aria-hidden="true">04</span>
+          <p class="feature-card__eyebrow">Listening Intelligence</p>
+          <h3 class="feature-card__title">Progress that answers the useful question</h3>
+          <p class="feature-card__desc">
+            Sometimes you want to know how far you've come. Other times — can you finish this on your commute? One tap switches the view.
+          </p>
+          <ul class="feature-card__list" role="list">
+            <li class="feature-card__item">Tap to toggle between time listened and time remaining</li>
+            <li class="feature-card__item">Designed for commutes, walks, and bedtime</li>
+            <li class="feature-card__item">Visible on every shelf card at a glance</li>
+          </ul>
+        </article>
+
+        <!-- 5. Search & Filters -->
+        <article class="feature-card reveal reveal-delay-1" id="feat-search">
+          <span class="feature-card__number" aria-hidden="true">05</span>
+          <p class="feature-card__eyebrow">Library</p>
+          <h3 class="feature-card__title">Search and filter your library</h3>
+          <p class="feature-card__desc">
+            Find exactly what you want in a large library without endless scrolling.
+          </p>
+          <ul class="feature-card__list" role="list">
+            <li class="feature-card__item">Search by title or author</li>
+            <li class="feature-card__item">Filter by genre, tag, finished state, or favorites</li>
+            <li class="feature-card__item">Sort by author, title, added date, duration, or year</li>
+            <li class="feature-card__item">Favorites use a user-specific tag — no server changes needed</li>
+          </ul>
+        </article>
+
+        <!-- 6. Ambient Audio — highlight -->
+        <article class="feature-card feature-card--highlight reveal reveal-delay-2" id="feat-ambient">
+          <span class="feature-card__number" aria-hidden="true">06</span>
+          <p class="feature-card__eyebrow">Uncommon Feature</p>
+          <h3 class="feature-card__title">Ambient audio while you listen</h3>
+          <p class="feature-card__desc">
+            Layer rain, music, fireplace, or focus audio quietly behind the narration. Attach it to a book, control the volume independently, and let it pause with your audiobook.
+          </p>
+          <ul class="feature-card__list" role="list">
+            <li class="feature-card__item">Import any audio track as ambient background</li>
+            <li class="feature-card__item">Attach ambient audio to the active book</li>
+            <li class="feature-card__item">Independent volume control from narration</li>
+            <li class="feature-card__item">Pauses and resumes with your audiobook automatically</li>
+            <li class="feature-card__item">Great for focus, relaxation, or bedtime listening</li>
+          </ul>
+          <span class="feature-card__badge">✦ You won't find this everywhere</span>
+        </article>
+
+        <!-- 7. Bookmarks & Clips -->
+        <article class="feature-card feature-card--accent reveal" id="feat-bookmarks">
+          <span class="feature-card__number" aria-hidden="true">07</span>
+          <p class="feature-card__eyebrow">Annotation</p>
+          <h3 class="feature-card__title">Bookmarks that become audio clips</h3>
+          <p class="feature-card__desc">
+            Standard bookmarks are just the start. Mark a moment, or define a range and clip up to one hour of audio from any book.
+          </p>
+          <ul class="feature-card__list" role="list">
+            <li class="feature-card__item">Point bookmarks at any position</li>
+            <li class="feature-card__item">Clip bookmarks with start and end range</li>
+            <li class="feature-card__item">Clip editor with preview controls</li>
+            <li class="feature-card__item">Attach local notes to any bookmark</li>
+            <li class="feature-card__item">Clips up to one hour long</li>
+          </ul>
+        </article>
+
+        <!-- 8. Export Clips & Transcripts — highlight -->
+        <article class="feature-card feature-card--highlight reveal reveal-delay-1" id="feat-export">
+          <span class="feature-card__number" aria-hidden="true">08</span>
+          <p class="feature-card__eyebrow">Premium Feature — No extra cost</p>
+          <h3 class="feature-card__title">Export clips & transcriptions</h3>
+          <p class="feature-card__desc">
+            Turn a clipped passage into a shareable audio file or a formatted text transcript. Hard to find in any other audiobook app.
+          </p>
+          <ul class="feature-card__list" role="list">
+            <li class="feature-card__item">Export clip range as M4A from downloaded books</li>
+            <li class="feature-card__item">Transcribe clips on supported iOS devices</li>
+            <li class="feature-card__item">Transcript includes book title, bookmark title, range, and text</li>
+            <li class="feature-card__item">Save important passages, ideas, and quotes</li>
+          </ul>
+          <span class="feature-card__badge">✦ No Subscription Needed</span>
+          <span class="feature-card__badge" style="background-color: #E6F4EA;">Requires iPhone 12+ and iOS 18+</span>
+        </article>
+
+        <!-- 9. Offline -->
+        <article class="feature-card reveal reveal-delay-2" id="feat-offline">
+          <span class="feature-card__number" aria-hidden="true">09</span>
+          <p class="feature-card__eyebrow">Reliability</p>
+          <h3 class="feature-card__title">Offline-friendly by design</h3>
+          <p class="feature-card__desc">
+            Downloaded books keep playing when the network doesn't. Progress syncs automatically when you reconnect. The app is always honest about what's available.
+          </p>
+          <ul class="feature-card__list" role="list">
+            <li class="feature-card__item">Downloaded books play fully offline</li>
+            <li class="feature-card__item">Non-downloaded books clearly marked unavailable</li>
+            <li class="feature-card__item">Offline progress queued and synced on reconnect</li>
+            <li class="feature-card__item">Cached library data stays visible during offline sessions</li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SCREENSHOT SHOWCASE
+  ═══════════════════════════════════════════ -->
+  <section class="screenshots-section section" id="screenshots" aria-labelledby="screenshots-heading">
+    <div class="container">
+      <div class="section-heading section-heading--center reveal">
+        <span class="section-heading__eyebrow">The app in action</span>
+        <h2 class="section-heading__title" id="screenshots-heading">See it for yourself.</h2>
+        <p class="section-heading__subtitle">
+          Every screen is designed around real listening workflows.
+        </p>
+      </div>
+
+      <!-- Paired feature screenshots — large -->
+      <div class="screenshot-grid">
+
+        <!-- Home shelves -->
+        <div class="screenshot-pair reveal">
+          <div class="screenshot-pair__visual">
+            <div class="screenshot-pair__image">
+              <img
+                src="assets/images/HERO_HOME_BOOKSHELVES.png"
+                alt="LAABS Audio home screen with custom bookshelves, cover art, and progress indicators"
+                loading="lazy"
+                width="300" height="640"
+              />
+            </div>
+          </div>
+          <div class="screenshot-pair__content">
+            <p class="screenshot-pair__eyebrow" style="color: var(--forest-400);">Home Screen</p>
+            <h3 class="screenshot-pair__title">
+              Your library, organized your way.
+            </h3>
+            <p class="screenshot-pair__desc">
+              Visual shelves give you fast access to Continue Listening, Recently Added, Discover, and any custom shelf you create. Progress, favorites, and offline status — all visible at a glance.
+            </p>
+          </div>
+        </div>
+
+        <!-- Book detail / Stream or local -->
+        <div class="screenshot-pair screenshot-pair--reversed reveal">
+          <div class="screenshot-pair__visual">
+            <div class="screenshot-pair__image">
+              <img
+                src="assets/images/BOOK_DETAIL_STREAM_OR_LOCAL.png"
+                alt="LAABS Audio book detail screen showing stream or local download option"
+                loading="lazy"
+                width="300" height="640"
+              />
+            </div>
+          </div>
+          <div class="screenshot-pair__content">
+            <p class="screenshot-pair__eyebrow" style="color: var(--forest-400);">Book Detail</p>
+            <h3 class="screenshot-pair__title">
+              Stream or play locally — your choice, clearly shown.
+            </h3>
+            <p class="screenshot-pair__desc">
+              Download a book for offline use, or stream it directly from your server. The app always tells you which mode you're in, so there's no guessing whether you're using data.
+            </p>
+          </div>
+        </div>
+
+        <!-- Search & Filters -->
+        <div class="screenshot-pair reveal">
+          <div class="screenshot-pair__visual">
+            <div class="screenshot-pair__image">
+              <img
+                src="assets/images/SEARCH_FILTERS.png"
+                alt="LAABS Audio search and filter interface showing genre, tag, and sort options"
+                loading="lazy"
+                width="300" height="640"
+              />
+            </div>
+          </div>
+          <div class="screenshot-pair__content">
+            <p class="screenshot-pair__eyebrow" style="color: var(--forest-400);">Search &amp; Filter</p>
+            <h3 class="screenshot-pair__title">
+              Find what you want in a large library.
+            </h3>
+            <p class="screenshot-pair__desc">
+              Search by title or author. Filter by genre, tag, finished status, or favorites. Sort by author, title, added date, duration, or published year.
+            </p>
+          </div>
+        </div>
+
+        <!-- Ambient audio -->
+        <div class="screenshot-pair screenshot-pair--reversed reveal">
+          <div class="screenshot-pair__visual">
+            <div class="screenshot-pair__image">
+              <img
+                src="assets/images/PLAYER_AMBIENT_PICKER.png"
+                alt="LAABS Audio ambient audio picker in the player"
+                loading="lazy"
+                width="300" height="640"
+              />
+            </div>
+          </div>
+          <div class="screenshot-pair__content">
+            <p class="screenshot-pair__eyebrow" style="color: var(--amber-500);">Ambient Audio</p>
+            <h3 class="screenshot-pair__title">
+              Layer sound behind the narration.
+            </h3>
+            <p class="screenshot-pair__desc">
+              Choose any ambient track — rain, music, fireplace, focus audio — and play it quietly behind your audiobook. Attach it to the book, control the volume, and let it pause with your listening session.
+            </p>
+          </div>
+        </div>
+
+        <!-- Clip editor -->
+        <div class="screenshot-pair reveal">
+          <div class="screenshot-pair__visual">
+            <div class="screenshot-pair__image">
+              <img
+                src="assets/images/CLIP_EDITOR_RANGE.png"
+                alt="LAABS Audio clip editor showing start and end range controls"
+                loading="lazy"
+                width="300" height="640"
+              />
+            </div>
+          </div>
+          <div class="screenshot-pair__content">
+            <p class="screenshot-pair__eyebrow" style="color: var(--amber-500);">Clips &amp; Bookmarks</p>
+            <h3 class="screenshot-pair__title">
+              Clip up to an hour of audio from any book.
+            </h3>
+            <p class="screenshot-pair__desc">
+              Set a start and end position, lock the end, preview the range, and save. Clips become permanent bookmarks you can export, transcribe, or revisit later.
+            </p>
+          </div>
+        </div>
+
+        <!-- Export actions -->
+        <div class="screenshot-pair screenshot-pair--reversed reveal">
+          <div class="screenshot-pair__visual">
+            <div class="screenshot-pair__image">
+              <img
+                src="assets/images/CLIP_BOOKMARK_EXPORT_ACTIONS.png"
+                alt="LAABS Audio clip bookmark export actions including M4A and transcript export"
+                loading="lazy"
+                width="300" height="640"
+              />
+            </div>
+          </div>
+          <div class="screenshot-pair__content">
+            <p class="screenshot-pair__eyebrow" style="color: var(--amber-500);">Export</p>
+            <h3 class="screenshot-pair__title">
+              Take a passage with you.
+            </h3>
+            <p class="screenshot-pair__desc">
+              Export a clip as M4A audio, or transcribe it to text on supported iOS devices. Share a favourite quote. Keep a note. Turn an audiobook into something you actively work with.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Horizontal screenshot strip -->
+      <div style="margin-top: clamp(var(--space-12), 6vw, var(--space-20));">
+        <p class="reveal" style="font-size: var(--text-sm); color: var(--forest-500); margin-bottom: var(--space-5); letter-spacing: 0.05em; text-transform: uppercase; font-weight: 600;">More screens →</p>
+        <div class="screenshot-strip reveal reveal-delay-1" role="list">
+
+          <div class="screenshot-item" role="listitem">
+            <div class="screenshot-item__frame">
+              <img src="assets/images/ADD_BOOKMARK_CREATE_CLIP.png" alt="Add bookmark or create clip screen" loading="lazy" width="220" height="470" />
+            </div>
+            <p class="screenshot-item__caption">Create bookmark or clip</p>
+          </div>
+
+          <div class="screenshot-item" role="listitem">
+            <div class="screenshot-item__frame">
+              <img src="assets/images/AMBIENT_AUDIO_SETTINGS.png" alt="Ambient audio settings screen" loading="lazy" width="220" height="470" />
+            </div>
+            <p class="screenshot-item__caption">Ambient audio settings</p>
+          </div>
+
+          <div class="screenshot-item" role="listitem">
+            <div class="screenshot-item__frame">
+              <img src="assets/images/HOME_PROGRESS_TOGGLE.png" alt="Home screen with progress time toggle" loading="lazy" width="220" height="470" />
+            </div>
+            <p class="screenshot-item__caption">Toggle: time listened ↔ time remaining</p>
+          </div>
+
+          <div class="screenshot-item" role="listitem">
+            <div class="screenshot-item__frame">
+              <img src="assets/images/BOOKSHELF_SETTINGS_REORDER.png" alt="Bookshelf settings and reorder screen" loading="lazy" width="220" height="470" />
+            </div>
+            <p class="screenshot-item__caption">Reorder your bookshelves</p>
+          </div>
+
+          <div class="screenshot-item" role="listitem">
+            <div class="screenshot-item__frame">
+              <img src="assets/images/ADD_BOOK_TO_BOOKSHELVES.png" alt="Add book to bookshelves screen" loading="lazy" width="220" height="470" />
+            </div>
+            <p class="screenshot-item__caption">Add book to any shelf</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       WHY LAABS AUDIO
+  ═══════════════════════════════════════════ -->
+  <section class="why-section section" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="why__inner">
+
+        <div>
+          <span class="section-heading__eyebrow" style="display: block; margin-bottom: var(--space-6);">Why LAABS Audio</span>
+          <blockquote class="why__quote reveal" id="why-heading">
+            "LAABS Audio is for listeners who want their Audiobookshelf server to stay in control of the library — while the mobile app makes listening, organizing, clipping, and revisiting books feel more personal."
+          </blockquote>
+        </div>
+
+        <ul class="why__list reveal reveal-delay-2" role="list">
+          <li class="why__item">
+            <span class="why__check" aria-hidden="true">✓</span>
+            <p class="why__item-text">A focused mobile companion to your self-hosted library</p>
+          </li>
+          <li class="why__item">
+            <span class="why__check" aria-hidden="true">✓</span>
+            <p class="why__item-text">Stream or download from your own Audiobookshelf server</p>
+          </li>
+          <li class="why__item">
+            <span class="why__check" aria-hidden="true">✓</span>
+            <p class="why__item-text">Organize with shelves and playlists, your way</p>
+          </li>
+          <li class="why__item">
+            <span class="why__check" aria-hidden="true">✓</span>
+            <p class="why__item-text">Ambient audio layered behind narration — uncommon and genuinely useful</p>
+          </li>
+          <li class="why__item">
+            <span class="why__check" aria-hidden="true">✓</span>
+            <p class="why__item-text">Clip up to an hour of audio. Export as M4A. Transcribe on-device.</p>
+          </li>
+          <li class="why__item">
+            <span class="why__check" aria-hidden="true">✓</span>
+            <p class="why__item-text">Works offline. Syncs when you're back.</p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       DOCUMENTATION TEASER
+  ═══════════════════════════════════════════ -->
+  <section class="docs-teaser section band--light" aria-labelledby="docs-teaser-heading">
+    <div class="container container--narrow">
+      <div class="docs-teaser__inner">
+
+        <div class="docs-teaser__sidebar reveal">
+          <div class="section-heading">
+            <span class="section-heading__eyebrow">Documentation</span>
+            <h2 class="section-heading__title" id="docs-teaser-heading">Get started quickly.</h2>
+            <p class="section-heading__subtitle">
+              Everything you need to connect LAABS Audio to your Audiobookshelf server and start listening.
+            </p>
+            <div style="margin-top: var(--space-6);">
+              <a href="docs.html" class="btn btn--store-light btn--lg" id="docs-teaser-btn">Browse the Docs</a>
+            </div>
+          </div>
+        </div>
+
+        <nav class="docs-grid reveal reveal-delay-1" aria-label="Documentation sections">
+          <a href="docs.html#getting-started" class="docs-card" id="docs-link-start">
+            <span class="docs-card__icon" aria-hidden="true">🚀</span>
+            <div class="docs-card__content">
+              <p class="docs-card__title">Getting Started</p>
+              <p class="docs-card__desc">Installation and first steps</p>
+            </div>
+            <span class="docs-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="docs.html#connecting" class="docs-card" id="docs-link-connect">
+            <span class="docs-card__icon" aria-hidden="true">🔗</span>
+            <div class="docs-card__content">
+              <p class="docs-card__title">Connecting to Audiobookshelf</p>
+              <p class="docs-card__desc">Server setup and sign-in</p>
+            </div>
+            <span class="docs-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="docs.html#downloads" class="docs-card" id="docs-link-downloads">
+            <span class="docs-card__icon" aria-hidden="true">📥</span>
+            <div class="docs-card__content">
+              <p class="docs-card__title">Downloads &amp; Offline</p>
+              <p class="docs-card__desc">Local playback and sync</p>
+            </div>
+            <span class="docs-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="docs.html#shelves" class="docs-card" id="docs-link-shelves">
+            <span class="docs-card__icon" aria-hidden="true">📚</span>
+            <div class="docs-card__content">
+              <p class="docs-card__title">Bookshelves &amp; Playlists</p>
+              <p class="docs-card__desc">Custom organization</p>
+            </div>
+            <span class="docs-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="docs.html#bookmarks" class="docs-card" id="docs-link-clips">
+            <span class="docs-card__icon" aria-hidden="true">✂️</span>
+            <div class="docs-card__content">
+              <p class="docs-card__title">Bookmarks &amp; Clips</p>
+              <p class="docs-card__desc">Annotate and export passages</p>
+            </div>
+            <span class="docs-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="docs.html#ambient" class="docs-card" id="docs-link-ambient">
+            <span class="docs-card__icon" aria-hidden="true">🎵</span>
+            <div class="docs-card__content">
+              <p class="docs-card__title">Ambient Audio</p>
+              <p class="docs-card__desc">Background sound while listening</p>
+            </div>
+            <span class="docs-card__arrow" aria-hidden="true">→</span>
+          </a>
+
+          <a href="docs.html#troubleshooting" class="docs-card" id="docs-link-troubleshoot">
+            <span class="docs-card__icon" aria-hidden="true">🔧</span>
+            <div class="docs-card__content">
+              <p class="docs-card__title">Troubleshooting</p>
+              <p class="docs-card__desc">Common issues and fixes</p>
+            </div>
+            <span class="docs-card__arrow" aria-hidden="true">→</span>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FINAL CTA
+  ═══════════════════════════════════════════ -->
+  <section class="section band--dark" aria-labelledby="cta-heading" style="text-align: center;">
+    <div class="container container--narrow">
+      <div class="reveal">
+        <img src="assets/images/laabs-icon.png" alt="LAABS Audio app icon" style="width: 72px; height: 72px; border-radius: 18px; margin-inline: auto; margin-bottom: var(--space-6); box-shadow: var(--shadow-lg);" loading="lazy" />
+        <h2 class="font-display" style="font-size: var(--text-4xl); line-height: 1.1; margin-bottom: var(--space-4);" id="cta-heading">
+          Ready to listen?
+        </h2>
+        <p style="font-size: var(--text-lg); color: var(--forest-300); max-width: 44ch; margin-inline: auto; margin-bottom: var(--space-8); line-height: 1.65;">
+          LAABS Audio is available on the App Store for iPhone. Connect it to your Audiobookshelf server and start listening in minutes.
+        </p>
+        <div style="display: flex; flex-wrap: wrap; gap: var(--space-4); justify-content: center; align-items: center;">
+          <!-- TODO: Replace href="#" with real App Store URL -->
+          <a href="#" class="btn btn--store btn--lg" id="cta-appstore-btn" aria-label="Download LAABS Audio on the App Store">
+            <svg class="btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+            </svg>
+            <span class="btn__store-text">
+              <span class="btn__store-label">Download on the</span>
+              <span class="btn__store-name">App Store</span>
+            </span>
+          </a>
+
+        </div>
+        <p style="margin-top: var(--space-5); font-size: var(--text-xs); color: var(--forest-600);">
+          Requires Audiobookshelf server v2.3.0 or higher
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<!-- ═══════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════ -->
+<footer id="site-footer" class="footer band--dark"></footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

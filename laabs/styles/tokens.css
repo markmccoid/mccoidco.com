@@ -1,0 +1,113 @@
+/* ============================================================
+   LAABS Audio — Design Tokens
+   Deep forest green × warm cream × rich editorial aesthetic
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+
+:root {
+  /* ── Brand Palette (OKLCH for perceptual uniformity) ── */
+  --forest-950: oklch(14% 0.04 152);
+  --forest-900: oklch(20% 0.055 152);
+  --forest-800: oklch(27% 0.07 152);
+  --forest-700: oklch(36% 0.088 150);
+  --forest-600: oklch(46% 0.1 148);
+  --forest-500: oklch(56% 0.11 146);
+  --forest-400: oklch(66% 0.1 144);
+  --forest-300: oklch(76% 0.085 142);
+  --forest-200: oklch(86% 0.055 140);
+  --forest-100: oklch(94% 0.025 138);
+  --forest-50:  oklch(97% 0.012 136);
+
+  /* Warm amber accent */
+  --amber-600: oklch(72% 0.17 60);
+  --amber-500: oklch(80% 0.19 58);
+  --amber-400: oklch(86% 0.17 56);
+  --amber-100: oklch(96% 0.04 55);
+
+  /* Warm neutrals (tinted green) */
+  --stone-950: oklch(15% 0.015 150);
+  --stone-900: oklch(22% 0.018 148);
+  --stone-800: oklch(32% 0.02 146);
+  --stone-600: oklch(52% 0.022 144);
+  --stone-400: oklch(70% 0.02 142);
+  --stone-200: oklch(87% 0.012 140);
+  --stone-100: oklch(93% 0.008 138);
+  --stone-50:  oklch(97% 0.004 136);
+  --cream:     oklch(98% 0.006 90);
+
+  /* Semantic tokens */
+  --bg-primary:    var(--forest-950);
+  --bg-secondary:  var(--forest-900);
+  --bg-surface:    var(--forest-800);
+  --bg-light:      var(--cream);
+  --bg-light-2:    var(--stone-100);
+  --text-primary:  var(--cream);
+  --text-muted:    var(--forest-300);
+  --text-dark:     var(--forest-900);
+  --text-dark-2:   var(--forest-700);
+  --accent:        var(--amber-500);
+  --accent-soft:   var(--amber-100);
+  --border-dark:   oklch(30% 0.04 150 / 0.5);
+  --border-light:  oklch(70% 0.05 145 / 0.3);
+
+  /* ── Typography ── */
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body:    'DM Sans', system-ui, sans-serif;
+
+  /* Fluid type scale */
+  --text-xs:   clamp(0.72rem, 0.68rem + 0.2vw, 0.8rem);
+  --text-sm:   clamp(0.875rem, 0.82rem + 0.28vw, 0.975rem);
+  --text-base: clamp(1rem, 0.94rem + 0.3vw, 1.125rem);
+  --text-lg:   clamp(1.15rem, 1.05rem + 0.5vw, 1.35rem);
+  --text-xl:   clamp(1.35rem, 1.15rem + 1vw, 1.75rem);
+  --text-2xl:  clamp(1.65rem, 1.35rem + 1.5vw, 2.25rem);
+  --text-3xl:  clamp(2rem, 1.5rem + 2.5vw, 3rem);
+  --text-4xl:  clamp(2.5rem, 1.8rem + 3.5vw, 4rem);
+  --text-5xl:  clamp(3rem, 2rem + 5vw, 5.5rem);
+
+  /* ── Spacing ── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  /* ── Layout ── */
+  --container-sm:  640px;
+  --container-md:  768px;
+  --container-lg:  1024px;
+  --container-xl:  1280px;
+  --container-2xl: 1440px;
+
+  /* ── Border radius ── */
+  --radius-sm:   6px;
+  --radius-md:   12px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-2xl:  40px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ── */
+  --shadow-sm:  0 1px 3px oklch(10% 0.04 150 / 0.25);
+  --shadow-md:  0 4px 16px oklch(10% 0.04 150 / 0.3);
+  --shadow-lg:  0 12px 40px oklch(10% 0.04 150 / 0.4);
+  --shadow-xl:  0 24px 64px oklch(10% 0.04 150 / 0.5);
+  --shadow-phone: 0 32px 80px oklch(10% 0.04 150 / 0.6), 0 8px 24px oklch(10% 0.04 150 / 0.35);
+
+  /* ── Motion ── */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast:  150ms;
+  --duration-base:  250ms;
+  --duration-slow:  400ms;
+  --duration-xl:    700ms;
+}
