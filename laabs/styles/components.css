@@ -451,11 +451,13 @@
 /* Notch / Dynamic Island */
 .phone-frame__island {
   position: absolute;
-  top: 12px;
+  /* Proportional to a real iPhone (125×37pt island, 11pt from the top of a 440×956pt screen)
+     so it lines up with the status bar instead of covering screen titles. */
+  top: 1.15%;
   left: 50%;
   transform: translateX(-50%);
-  width: 120px;
-  height: 34px;
+  width: 28.5%;
+  aspect-ratio: 125 / 37;
   background-color: var(--forest-950);
   border-radius: var(--radius-full);
   z-index: 2;

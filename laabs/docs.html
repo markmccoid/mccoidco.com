@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Documentation — LAABS Audio</title>
-  <meta name="description" content="Documentation for LAABS Audio — the iPhone audiobook app for Audiobookshelf server users. Get started, connect your server, configure bookshelves, and more." />
+  <meta name="description" content="How to use LAABS Audio: get started with or without an Audiobookshelf server, organize bookshelves and synced playlists, turn bookmarks into clips, and layer ambient audio behind your audiobooks." />
   <meta name="theme-color" content="#0d2015" />
   <link rel="icon" type="image/png" href="assets/images/laabs-icon.png" />
   <link rel="stylesheet" href="styles/tokens.css" />
   <link rel="stylesheet" href="styles/base.css" />
   <link rel="stylesheet" href="styles/components.css" />
-  <link rel="stylesheet" href="styles/docs.css" />
+  <link rel="stylesheet" href="styles/docs.css?v=2" />
 </head>
 <body>
 
@@ -23,8 +23,6 @@
 <!-- ═══════════════════════════════════════════
      DOCS HERO
 ═══════════════════════════════════════════ -->
-
-
 <div class="docs-hero band--light">
   <div class="container">
     <div class="docs-hero__inner">
@@ -35,7 +33,7 @@
       </nav>
       <h1 class="docs-hero__title">Documentation</h1>
       <p class="docs-hero__subtitle">
-        Everything you need to set up LAABS Audio, connect it to your Audiobookshelf server, and get the most out of every feature.
+        How to set up LAABS Audio, with or without an Audiobookshelf server, and how to get the most out of bookshelves, clips, and ambient audio.
       </p>
     </div>
   </div>
@@ -57,17 +55,9 @@
           <span class="docs-sidebar__icon" aria-hidden="true">🚀</span>
           Getting Started
         </a>
-        <a href="#connecting" class="docs-sidebar__link" data-sidebar-link>
-          <span class="docs-sidebar__icon" aria-hidden="true">🔗</span>
-          Connecting
-        </a>
-        <a href="#downloads" class="docs-sidebar__link" data-sidebar-link>
-          <span class="docs-sidebar__icon" aria-hidden="true">📥</span>
-          Downloads &amp; Offline
-        </a>
         <a href="#shelves" class="docs-sidebar__link" data-sidebar-link>
           <span class="docs-sidebar__icon" aria-hidden="true">📚</span>
-          Bookshelves &amp; Playlists
+          Bookshelves
         </a>
         <a href="#bookmarks" class="docs-sidebar__link" data-sidebar-link>
           <span class="docs-sidebar__icon" aria-hidden="true">✂️</span>
@@ -77,16 +67,12 @@
           <span class="docs-sidebar__icon" aria-hidden="true">🎵</span>
           Ambient Audio
         </a>
-        <a href="#troubleshooting" class="docs-sidebar__link" data-sidebar-link>
-          <span class="docs-sidebar__icon" aria-hidden="true">🔧</span>
-          Troubleshooting
-        </a>
       </aside>
 
       <!-- Main content -->
       <article class="docs-content">
 
-        <!-- ── Getting Started ── -->
+        <!-- ═══════════ GETTING STARTED ═══════════ -->
         <section class="docs-section" id="getting-started" aria-labelledby="sect-start">
           <div class="docs-section__header">
             <span class="docs-section__icon" aria-hidden="true">🚀</span>
@@ -94,150 +80,234 @@
           </div>
           <div class="docs-section__body">
             <p>
-              LAABS Audio is an iPhone audiobook app for people who run their own Audiobookshelf server. Before using LAABS Audio, you need an active Audiobookshelf server running version <code>2.3.0</code> or higher.
+              LAABS Audio is an audiobook player for iPhone. It was built with Audiobookshelf in mind, but
+              <strong>you don't need an Audiobookshelf server to use it</strong>. You can import audiobook files
+              straight onto your phone and listen to them, connect to your own Audiobookshelf server, or do both.
             </p>
 
-            <div class="docs-callout docs-callout--info">
-              <p class="docs-callout__icon">ℹ️ Prerequisite</p>
-              <p>LAABS Audio requires an Audiobookshelf server you own or have access to. It does not host books itself. If you don't have an Audiobookshelf server yet, visit <a href="https://audiobookshelf.org" target="_blank" rel="noopener" style="color: var(--forest-700); text-decoration: underline;">audiobookshelf.org</a> to get started.</p>
+            <p>
+              Start by downloading LAABS Audio from the
+              <a href="https://apps.apple.com/us/app/laabs-audio/id6759327096" target="_blank" rel="noopener">App Store</a>.
+              Then pick a starting point. You can add the other one whenever you like.
+            </p>
+
+            <div class="docs-choice">
+              <div class="docs-choice__card">
+                <span class="docs-choice__tag">No server needed</span>
+                <h3 class="docs-choice__title">Import your own audiobooks</h3>
+                <p>
+                  Skip the server sign-in and import audiobooks from the Files app or iCloud Drive.
+                  LAABS Audio plays <code>m4b</code>, <code>m4a</code>, <code>mp3</code>, <code>aac</code>,
+                  <code>wav</code>, and <code>flac</code> files.
+                </p>
+                <p>
+                  Imported books get chapters, cover art, and CarPlay, and they show up on their own
+                  <em>Imported</em> bookshelf. Bookmarks, clips, and ambient audio all work with imported books.
+                </p>
+              </div>
+              <div class="docs-choice__card">
+                <span class="docs-choice__tag docs-choice__tag--abs">Audiobookshelf v2.26.0+</span>
+                <h3 class="docs-choice__title">Connect to Audiobookshelf</h3>
+                <p>
+                  Sign in to your own Audiobookshelf server to stream, download, and sync your listening
+                  progress back to the server. Playlists you make in LAABS Audio sync to Audiobookshelf too.
+                </p>
+                <p>
+                  Your server must be running <strong>version 2.26.0 or higher</strong>.
+                </p>
+              </div>
             </div>
 
-            <h3>Installation</h3>
+            <div class="docs-callout docs-callout--info">
+              <p class="docs-callout__icon">🤝 You can do both</p>
+              <p>
+                Importing books and using Audiobookshelf aren't an either/or choice. Sign in to your server and you
+                can still import audiobooks from Files or iCloud Drive. Start with imported books and you can connect
+                a server later without losing them. Server books and imported books sit side by side in the same app,
+                with imported ones collected on the <em>Imported</em> shelf.
+              </p>
+            </div>
+
+            <h3 id="connecting">Connecting to Audiobookshelf</h3>
+
+            <div class="docs-callout docs-callout--warning">
+              <p class="docs-callout__icon">⚠️ Requires Audiobookshelf v2.26.0 or higher</p>
+              <p>
+                Audiobookshelf changed its authentication system in v2.26.0, and LAABS Audio only supports the new
+                system. If your server runs an older version, sign-in will fail. Update your server before you connect.
+                Your Audiobookshelf version is shown in the server's web interface under <em>Settings</em>.
+              </p>
+            </div>
+
             <div class="docs-steps">
               <div class="docs-step">
                 <div class="docs-step__number">1</div>
                 <div class="docs-step__content">
-                  <p class="docs-step__title">Download LAABS Audio</p>
-                  <p class="docs-step__desc">Download LAABS Audio from the <a href="https://apps.apple.com/us/app/laabs-audio/id6759327096" target="_blank" rel="noopener" style="color: var(--forest-700); text-decoration: underline;">App Store</a> on your iPhone.</p>
+                  <p class="docs-step__title">Enter your server address</p>
+                  <p class="docs-step__desc">
+                    Use the same address you use to reach Audiobookshelf in a browser, including the port if
+                    there is one. For example, <code>https://books.yourdomain.com</code> or
+                    <code>http://192.168.1.10:13378</code>.
+                  </p>
                 </div>
               </div>
               <div class="docs-step">
                 <div class="docs-step__number">2</div>
                 <div class="docs-step__content">
-                  <p class="docs-step__title">Open the app</p>
-                  <p class="docs-step__desc">Launch LAABS Audio. You'll be prompted to connect to your Audiobookshelf server on first launch.</p>
+                  <p class="docs-step__title">Sign in</p>
+                  <p class="docs-step__desc">Use your Audiobookshelf username and password. Your credentials are stored securely on your iPhone and are only ever sent to your server.</p>
                 </div>
               </div>
               <div class="docs-step">
                 <div class="docs-step__number">3</div>
                 <div class="docs-step__content">
-                  <p class="docs-step__title">Enter your server address</p>
-                  <p class="docs-step__desc">Type the URL or IP address of your Audiobookshelf server (e.g. <code>https://books.yourdomain.com</code> or <code>http://192.168.1.10:13378</code>).</p>
+                  <p class="docs-step__title">Pick a library</p>
+                  <p class="docs-step__desc">If your account can see more than one Audiobookshelf library, choose the one you want. You can switch libraries later, and your shelves and playlists follow the library you're in.</p>
                 </div>
               </div>
-              <div class="docs-step">
-                <div class="docs-step__number">4</div>
-                <div class="docs-step__content">
-                  <p class="docs-step__title">Sign in</p>
-                  <p class="docs-step__desc">Log in with your Audiobookshelf username and password. Your library will load automatically.</p>
-                </div>
+            </div>
+
+            <h3 id="downloads">Streaming and downloading</h3>
+            <div class="docs-media">
+              <div class="docs-media__text">
+                <p>
+                  Books from your server can be streamed or downloaded. Open a book and tap the cloud button
+                  beside the cover to download its audio and cover art to your iPhone.
+                </p>
+                <p>
+                  The play button always tells you which mode you're in: <em>Stream</em> or local playback.
+                  Downloaded books keep playing with no connection, and any progress you make offline syncs back
+                  to Audiobookshelf when you reconnect.
+                </p>
+                <p>
+                  Downloading matters for a few features. Exporting clip audio and transcriptions both need
+                  the book on your phone (see <a href="#bookmarks">Bookmarks &amp; Clips</a>).
+                </p>
               </div>
+              <figure class="docs-phone">
+                <div class="phone-frame__shell">
+                  <div class="phone-frame__island" aria-hidden="true"></div>
+                  <img src="assets/images/screens/book-detail.jpg" alt="A book's detail page with the download button beside the cover and a Stream button" loading="lazy" width="720" height="1564" class="phone-frame__screen" />
+                </div>
+                <figcaption>The book detail page. Download sits beside the cover.</figcaption>
+              </figure>
             </div>
           </div>
         </section>
 
 
-        <!-- ── Connecting ── -->
-        <section class="docs-section" id="connecting" aria-labelledby="sect-connect">
-          <div class="docs-section__header">
-            <span class="docs-section__icon" aria-hidden="true">🔗</span>
-            <h2 class="docs-section__title" id="sect-connect">Connecting to Audiobookshelf</h2>
-          </div>
-          <div class="docs-section__body">
-            <p>
-              LAABS Audio connects directly to your Audiobookshelf server using its REST API. Your credentials are stored securely on-device. LAABS Audio does not relay your data through any external service.
-            </p>
-
-            <h3>Server address formats</h3>
-            <p>LAABS Audio accepts both HTTP and HTTPS addresses, with or without a port number:</p>
-            <ul>
-              <li><code>https://books.yourdomain.com</code></li>
-              <li><code>http://192.168.1.10:13378</code></li>
-              <li><code>https://abs.local:13379</code></li>
-            </ul>
-
-            <h3>Multiple libraries</h3>
-            <p>
-              If your Audiobookshelf account has access to more than one library, you can switch between them from within the app. LAABS Audio will load the books, shelves, and playlists from the selected library.
-            </p>
-
-            <div class="docs-callout docs-callout--warning">
-              <p class="docs-callout__icon">⚠️ Version requirement</p>
-              <p>LAABS Audio requires Audiobookshelf server <strong>v2.3.0 or higher</strong>. Older versions of the Audiobookshelf use a different authentication system.</p>
-            </div>
-          </div>
-        </section>
-
-
-        <!-- ── Downloads & Offline ── -->
-        <section class="docs-section" id="downloads" aria-labelledby="sect-downloads">
-          <div class="docs-section__header">
-            <span class="docs-section__icon" aria-hidden="true">📥</span>
-            <h2 class="docs-section__title" id="sect-downloads">Downloads &amp; Offline Listening</h2>
-          </div>
-          <div class="docs-section__body">
-            <p>
-              LAABS Audio lets you download individual books to your iPhone for local playback. Once downloaded, a book plays from the device — no server or network required.
-            </p>
-
-            <h3>How to download a book</h3>
-            <p>
-              Open the book's detail screen and tap the download button. LAABS Audio downloads the audiobook audio and cover art. Download progress is shown on the book detail screen and on the book card in your shelves.
-            </p>
-
-            <h3>Offline behaviour</h3>
-            <ul>
-              <li>Downloaded books continue to play with no network connection.</li>
-              <li>Non-downloaded books show clearly that streaming is unavailable when offline.</li>
-              <li>Progress changes made while offline are queued locally and synced to Audiobookshelf when the app reconnects.</li>
-              <li>Cached library data (cover art, metadata) remains visible during an offline session.</li>
-            </ul>
-
-            <h3>Local vs stream indicators</h3>
-            <p>
-              LAABS Audio always shows whether you are playing from the local download or streaming from your server. This is visible on the book detail screen and in the player.
-            </p>
-          </div>
-        </section>
-
-
-        <!-- ── Bookshelves ── -->
+        <!-- ═══════════ BOOKSHELVES ═══════════ -->
         <section class="docs-section" id="shelves" aria-labelledby="sect-shelves">
           <div class="docs-section__header">
             <span class="docs-section__icon" aria-hidden="true">📚</span>
-            <h2 class="docs-section__title" id="sect-shelves">Bookshelves &amp; Playlists</h2>
+            <h2 class="docs-section__title" id="sect-shelves">Bookshelves</h2>
           </div>
           <div class="docs-section__body">
-            <p>
-              The LAABS Audio Home screen is built around bookshelves. You start with three standard shelves — Continue Listening, Recently Added, and Discover — and can add more.
-            </p>
+            <div class="docs-media">
+              <div class="docs-media__text">
+                <p>
+                  The Home screen is a stack of bookshelves. Each shelf is a row of covers you can swipe through,
+                  with listening progress under each book. Tap the progress badge to flip between time listened
+                  and time left.
+                </p>
+                <p>
+                  Not every shelf works the same way. LAABS Audio has three kinds, and knowing which is which
+                  tells you where its books come from and whether it syncs with Audiobookshelf.
+                </p>
+              </div>
+              <figure class="docs-phone">
+                <div class="phone-frame__shell">
+                  <div class="phone-frame__island" aria-hidden="true"></div>
+                  <img src="assets/images/screens/home-bookshelves.jpg" alt="The Home screen with Continue Listening, Next Up, and Recently Added shelves" loading="lazy" width="720" height="1564" class="phone-frame__screen" />
+                </div>
+                <figcaption>Home: a stack of shelves you control.</figcaption>
+              </figure>
+            </div>
 
-            <h3>Standard shelves</h3>
+            <h3>Types of bookshelves</h3>
+            <div class="docs-types">
+              <div class="docs-type">
+                <span class="docs-badge docs-badge--derived">Derived</span>
+                <h4 class="docs-type__title">Automatic shelves</h4>
+                <p>
+                  Built for you from your library and listening. You don't add books to these; they fill
+                  themselves.
+                </p>
+                <ul>
+                  <li><strong>Continue Listening</strong>: books in progress</li>
+                  <li><strong>Recently Added</strong>: newest books in your library</li>
+                  <li><strong>Discover</strong>: a rotating pick of books you haven't started</li>
+                  <li><strong>Downloaded</strong>: books stored on your iPhone</li>
+                  <li><strong>Imported</strong>: books you imported from Files or iCloud Drive</li>
+                </ul>
+              </div>
+              <div class="docs-type">
+                <span class="docs-badge docs-badge--playlist">Playlist</span>
+                <h4 class="docs-type__title">Audiobookshelf playlists</h4>
+                <p>
+                  Shelves that are backed by a playlist on your Audiobookshelf server, and stay in sync with it.
+                </p>
+                <ul>
+                  <li>Playlists you already have in Audiobookshelf appear as shelves.</li>
+                  <li>A new playlist shelf made in LAABS Audio is created on your server as a playlist.</li>
+                  <li>Adding or removing books on either side shows up on the other.</li>
+                </ul>
+              </div>
+              <div class="docs-type">
+                <span class="docs-badge docs-badge--device">Device only</span>
+                <h4 class="docs-type__title">Local shelves</h4>
+                <p>
+                  Shelves stored only on your iPhone. They never touch your server, so they're good for
+                  personal groupings like a bedtime shelf or a research pile, and they work without
+                  Audiobookshelf at all.
+                </p>
+              </div>
+            </div>
+
+            <h3>How playlists sync with Audiobookshelf</h3>
+            <p>
+              A playlist shelf is a live view of an Audiobookshelf playlist. Changes you make in LAABS Audio are
+              written to the playlist on your server, and changes made on the server (in the web app or another
+              client) appear on the shelf the next time LAABS Audio refreshes your library.
+            </p>
             <ul>
-              <li><strong>Continue Listening</strong> — books you have started and not finished.</li>
-              <li><strong>Recently Added</strong> — the newest books in your Audiobookshelf library.</li>
-              <li><strong>Discover</strong> — a refreshed selection of books you haven't started yet.</li>
+              <li>Audiobookshelf playlists belong to your user and to a single library, so you'll see the playlists for the library you're currently in.</li>
+              <li>Hiding a playlist shelf only hides it in LAABS Audio. The playlist stays on your server untouched.</li>
+              <li>If you aren't connected to a server, use device-only shelves instead.</li>
             </ul>
 
-            <h3>Custom shelves</h3>
+            <h3>Adding books to a shelf</h3>
             <p>
-              You can create device-only bookshelves that are stored locally on your iPhone. These don't sync to Audiobookshelf. They're useful for personal groupings — a shelf for a long series, a bedtime shelf, a research shelf.
+              On a book's detail page, tap the bookshelf button at the top of the column beside the cover. Choose
+              the playlist or device-only shelves you want the book on. A book can sit on as many shelves as you
+              like.
             </p>
 
-            <h3>Playlist shelves</h3>
-            <p>
-              Audiobookshelf playlists can be displayed as Home shelves in LAABS Audio. You can also create new playlist-style shelves from within LAABS Audio that sync back to Audiobookshelf as playlists.
-            </p>
-
-            <h3>Reordering and visibility</h3>
-            <p>
-              Open Bookshelf Settings to show or hide individual shelves and drag them into your preferred order. Hidden shelves are not deleted — you can re-enable them at any time.
-            </p>
+            <h3>Rearranging, hiding, and showing shelves</h3>
+            <div class="docs-media">
+              <div class="docs-media__text">
+                <p>Go to <strong>Settings › Bookshelves</strong> to manage every shelf in one list.</p>
+                <ul>
+                  <li><strong>Reorder:</strong> drag a shelf by its handle (<span aria-label="three lines">≡</span>) to move it up or down. Home updates to match.</li>
+                  <li><strong>Hide or show:</strong> each shelf is marked <em>Shown</em> or <em>Hidden</em>. Tap a shelf to change it. Hidden shelves aren't deleted, and you can bring them back anytime.</li>
+                  <li><strong>Visible Only:</strong> filter the list down to the shelves currently on Home.</li>
+                  <li><strong>New Shelf:</strong> create a playlist shelf or a device-only shelf.</li>
+                </ul>
+                <p>The badge under each name tells you its type: <em>Derived</em>, <em>Playlist</em>, or device only.</p>
+              </div>
+              <figure class="docs-phone">
+                <div class="phone-frame__shell">
+                  <div class="phone-frame__island" aria-hidden="true"></div>
+                  <img src="assets/images/screens/custom-bookshelves.jpg" alt="Settings › Bookshelves listing each shelf with a drag handle, a type badge, and a Shown or Hidden label" loading="lazy" width="720" height="1564" class="phone-frame__screen" />
+                </div>
+                <figcaption>Settings › Bookshelves. Drag to reorder, tap to show or hide.</figcaption>
+              </figure>
+            </div>
           </div>
         </section>
 
 
-        <!-- ── Bookmarks & Clips ── -->
+        <!-- ═══════════ BOOKMARKS & CLIPS ═══════════ -->
         <section class="docs-section" id="bookmarks" aria-labelledby="sect-clips">
           <div class="docs-section__header">
             <span class="docs-section__icon" aria-hidden="true">✂️</span>
@@ -245,38 +315,96 @@
           </div>
           <div class="docs-section__body">
             <p>
-              LAABS Audio supports both point bookmarks and clip bookmarks. Every bookmark can include a local note. Clip bookmarks can be exported as audio files or transcribed to text.
+              A <strong>bookmark</strong> marks a single moment in a book. A <strong>clip</strong> is simply a
+              bookmark extended: it has a start <em>and</em> an end, so it captures a whole passage instead of a
+              single point. Clips live in the same bookmark list, can carry the same notes, and can be up to one
+              hour long.
             </p>
+
+            <div class="docs-compare">
+              <div class="docs-compare__item">
+                <p class="docs-compare__label">Bookmark</p>
+                <div class="docs-compare__track" aria-hidden="true"><span class="docs-compare__point"></span></div>
+                <p>One position. Jump back to it anytime.</p>
+              </div>
+              <div class="docs-compare__item">
+                <p class="docs-compare__label">Clip</p>
+                <div class="docs-compare__track" aria-hidden="true"><span class="docs-compare__range"></span></div>
+                <p>A start and an end. Replay it, export the audio, or turn it into text.</p>
+              </div>
+            </div>
 
             <h3>Creating a bookmark</h3>
             <p>
-              While the player is open, tap the bookmark button to save your current position. You can add a title and note at the time of saving, or edit it later.
+              While listening, tap the bookmark button in the row of controls at the bottom of the player. The
+              bookmark is saved at your current position. Give it a title and an optional note now, or edit it later.
             </p>
 
-            <h3>Creating a clip</h3>
-            <p>
-              When creating a bookmark, choose Clip to set a start and end range. The clip editor gives you controls for the start position, end position, duration, and a preview button to hear the selected range before saving. Clips can be up to one hour long.
-            </p>
+            <h3>Turning a bookmark into a clip</h3>
+            <div class="docs-media">
+              <div class="docs-media__text">
+                <p>
+                  When you add a bookmark, choose to make it a clip. The clip editor opens with your position as
+                  the starting point.
+                </p>
+                <ul>
+                  <li><strong>Selected range</strong> at the top shows the start, duration, and end.</li>
+                  <li><strong>Starting position</strong> nudges the start back or forward by 1 minute, 10 seconds, or 1 second.</li>
+                  <li><strong>Duration</strong> sets the length with a slider or the same nudge buttons. Lock it to move the start without changing the length.</li>
+                  <li><strong>Preview</strong> plays the range. <em>Last 5s</em> replays just the ending so you can trim precisely.</li>
+                </ul>
+              </div>
+              <figure class="docs-phone">
+                <div class="phone-frame__shell">
+                  <div class="phone-frame__island" aria-hidden="true"></div>
+                  <img src="assets/images/screens/create-clip.jpg" alt="The Create Clip editor with Selected Range, Starting Position, Duration, and preview controls" loading="lazy" width="720" height="1564" class="phone-frame__screen" />
+                </div>
+                <figcaption>The clip editor.</figcaption>
+              </figure>
+            </div>
 
-            <h3>Exporting a clip as audio</h3>
-            <p>
-              If the book is downloaded locally on your device, you can export a saved clip as an M4A audio file. Open the clip bookmark and tap Export Audio.
-            </p>
+            <h3>Making a clip from Read-Along text</h3>
+            <div class="docs-media">
+              <div class="docs-media__text">
+                <p>
+                  If the book has a transcript, you can clip straight from the words. In Read-Along, long-press a
+                  sentence, tap more sentences to extend the selection, then save. The clip's start and end are
+                  taken from the text, and its words come along with it.
+                </p>
+              </div>
+              <figure class="docs-phone">
+                <div class="phone-frame__shell">
+                  <div class="phone-frame__island" aria-hidden="true"></div>
+                  <img src="assets/images/screens/read-along-clip.jpg" alt="Two sentences selected in Read-Along, ready to save as a clip" loading="lazy" width="720" height="1565" class="phone-frame__screen" />
+                </div>
+                <figcaption>Select sentences, save a clip.</figcaption>
+              </figure>
+            </div>
 
-            <h3>Transcribing a clip</h3>
-            <p>
-              On supported iOS devices, LAABS Audio can transcribe a clip bookmark using on-device speech recognition. Open the clip bookmark, tap Transcribe, and wait for the transcription to complete. The transcript includes the book title, bookmark title, clip range, and the transcribed text.
-            </p>
-
+            <h3>Exporting clip audio and transcriptions</h3>
+            <div class="docs-callout docs-callout--warning">
+              <p class="docs-callout__icon">📥 The book must be downloaded</p>
+              <p>
+                Exporting a clip's audio and transcribing a clip both work from the audio file on your iPhone.
+                If you're streaming the book, download it first (the cloud button on the book's detail page),
+                then come back to the clip. Imported books are already on your phone.
+              </p>
+            </div>
+            <p>Open a saved clip from the book's bookmark list to see its export options:</p>
+            <ul>
+              <li><strong>Export audio:</strong> saves the clip's range as an <code>M4A</code> file you can share, send, or save to Files.</li>
+              <li><strong>Transcribe and export text:</strong> turns the clip's audio into text. If the book already has a transcript, the clip's text is ready instantly; otherwise LAABS Audio transcribes it on your iPhone. The export includes the book title, bookmark title, clip range, and the text.</li>
+              <li><strong>Notes:</strong> stay with the bookmark on your device, whether or not you export.</li>
+            </ul>
             <div class="docs-callout docs-callout--info">
-              <p class="docs-callout__icon">ℹ️ Transcription availability</p>
-              <p>Clip transcription uses on-device processing and requires a compatible iOS device with sufficient resources. No audio or transcript data is sent to any external server.</p>
+              <p class="docs-callout__icon">🔒 Private by design</p>
+              <p>Transcription runs entirely on your iPhone. No audio or text is uploaded anywhere. On-device transcription requires iOS 26.</p>
             </div>
           </div>
         </section>
 
 
-        <!-- ── Ambient Audio ── -->
+        <!-- ═══════════ AMBIENT AUDIO ═══════════ -->
         <section class="docs-section" id="ambient" aria-labelledby="sect-ambient">
           <div class="docs-section__header">
             <span class="docs-section__icon" aria-hidden="true">🎵</span>
@@ -284,81 +412,72 @@
           </div>
           <div class="docs-section__body">
             <p>
-              Ambient audio lets you layer a background track — music, rain, fireplace, focus audio, or anything else — quietly behind the audiobook narration. It's an uncommon feature that makes a meaningful difference for certain listening styles.
+              Ambient audio plays a second, quieter track underneath the narration: soft music, rain, a fireplace,
+              focus sounds, whatever helps you listen. The track loops for as long as the book plays, and it has its
+              own volume so the narrator always stays on top.
             </p>
 
-            <h3>Importing an ambient track</h3>
-            <p>
-              Ambient audio tracks are files you import from your iPhone. Open Ambient Audio Settings and tap Add Track to import an audio file from your Files app or music library.
-            </p>
+            <h3>How it works</h3>
+            <div class="docs-steps">
+              <div class="docs-step">
+                <div class="docs-step__number">1</div>
+                <div class="docs-step__content">
+                  <p class="docs-step__title">Import your tracks</p>
+                  <p class="docs-step__desc">Go to <strong>Settings › Ambient Audio</strong> and add audio files from your iPhone. Import as many as you like so you can switch between different sound beds.</p>
+                </div>
+              </div>
+              <div class="docs-step">
+                <div class="docs-step__number">2</div>
+                <div class="docs-step__content">
+                  <p class="docs-step__title">Pick a track in the player</p>
+                  <p class="docs-step__desc">Open the Ambient Audio sheet from the player and choose a track. It starts looping right away behind the book.</p>
+                </div>
+              </div>
+              <div class="docs-step">
+                <div class="docs-step__number">3</div>
+                <div class="docs-step__content">
+                  <p class="docs-step__title">Set the mix</p>
+                  <p class="docs-step__desc">Drag <em>Ambient Volume</em> until it sits comfortably under the narrator. Then close the sheet and listen.</p>
+                </div>
+              </div>
+            </div>
 
-            <h3>Attaching ambient audio to a book</h3>
-            <p>
-              While listening, open the ambient audio picker in the player and choose a track. The track is attached to the active book and will play automatically when you resume that book.
-            </p>
+            <div class="docs-phones">
+              <figure class="docs-phone">
+                <div class="phone-frame__shell">
+                  <div class="phone-frame__island" aria-hidden="true"></div>
+                  <img src="assets/images/screens/ambient-audio.jpg" alt="The Ambient Audio sheet with the selected track, Ambient Volume with a Fine Volume switch, and Ambient Position" loading="lazy" width="720" height="1564" class="phone-frame__screen" />
+                </div>
+                <figcaption>The Ambient Audio sheet.</figcaption>
+              </figure>
+              <figure class="docs-phone">
+                <div class="phone-frame__shell">
+                  <div class="phone-frame__island" aria-hidden="true"></div>
+                  <img src="assets/images/screens/now-playing.jpg" alt="The player with the ambient track shown in a bar under the book title, with pause and remove buttons" loading="lazy" width="720" height="1564" class="phone-frame__screen" />
+                </div>
+                <figcaption>The ambient track sits under the book title in the player.</figcaption>
+              </figure>
+            </div>
 
-            <h3>Volume and playback control</h3>
+            <h3>Controls</h3>
             <ul>
-              <li>Ambient audio has its own volume slider, separate from the narration volume.</li>
-              <li>When you pause the audiobook, ambient audio pauses too.</li>
-              <li>When you resume the audiobook, ambient audio resumes too.</li>
-              <li>You can remove the ambient track from a book at any time without deleting the imported track.</li>
+              <li><strong>Ambient Volume</strong> is separate from the narration, so you can turn the background down without touching the book.</li>
+              <li><strong>Fine Volume</strong> narrows the slider's range so you can make small adjustments at very low levels, where most ambient tracks sound best.</li>
+              <li><strong>Ambient Position</strong> moves where the loop is playing. Drag it to skip a part of the track you don't like.</li>
+              <li><strong>The ambient bar</strong> in the player shows what's playing. Use its button to pause just the ambient track, or tap <strong>×</strong> to remove it for a narration-only session.</li>
             </ul>
 
-            <h3>Use cases</h3>
+            <h3>How it behaves with your book</h3>
             <ul>
-              <li>Soft background music while listening to fiction.</li>
-              <li>Rain or ocean sounds for a calming atmosphere.</li>
-              <li>Focus or lo-fi audio layered behind a non-fiction book.</li>
-              <li>A consistent sound bed for bedtime listening.</li>
-            </ul>
-          </div>
-        </section>
-
-
-        <!-- ── Troubleshooting ── -->
-        <section class="docs-section" id="troubleshooting" aria-labelledby="sect-trouble">
-          <div class="docs-section__header">
-            <span class="docs-section__icon" aria-hidden="true">🔧</span>
-            <h2 class="docs-section__title" id="sect-trouble">Troubleshooting</h2>
-          </div>
-          <div class="docs-section__body">
-
-            <h3>Can't connect to my server</h3>
-            <ul>
-              <li>Make sure your Audiobookshelf server is running and reachable from your network.</li>
-              <li>Double-check the server address, including the port number if applicable.</li>
-              <li>If using HTTPS, ensure your SSL certificate is valid and trusted.</li>
-              <li>Confirm your server is running Audiobookshelf <code>v2.3.0</code> or higher.</li>
-            </ul>
-
-            <h3>Progress isn't syncing</h3>
-            <ul>
-              <li>Progress is synced when the app is online and the listening session ends.</li>
-              <li>If you were offline, progress will sync automatically when you reconnect.</li>
-              <li>Check that your server is accessible and you're signed in.</li>
-            </ul>
-
-            <h3>A downloaded book won't play offline</h3>
-            <ul>
-              <li>Verify the download completed successfully — the book should show a local playback indicator.</li>
-              <li>If the download was interrupted, try downloading the book again.</li>
-            </ul>
-
-            <h3>Clip export fails</h3>
-            <ul>
-              <li>Clip export as M4A requires the book to be downloaded locally on the device.</li>
-              <li>If the book is streaming only, download it first, then export the clip.</li>
-            </ul>
-
-            <h3>Transcription is unavailable</h3>
-            <ul>
-              <li>Transcription uses on-device processing and may not be available on all iPhone models.</li>
-              <li>Make sure your iOS version is up to date.</li>
+              <li>Pause the book and the ambient track pauses with it. Resume, and both pick up together.</li>
+              <li>The track is attached to the book you're listening to, so it comes back when you return to that book.</li>
+              <li>Removing a track from a book doesn't delete it. It stays in Settings › Ambient Audio for next time.</li>
+              <li>Ambient audio works with streamed, downloaded, and imported books alike.</li>
             </ul>
 
             <div class="docs-callout docs-callout--info">
-              <p class="docs-callout__icon">💬 Need help?</p>
+              <p class="docs-callout__icon">💡 Ideas</p>
+              <p>Rain or ocean sounds for bedtime listening. Lo-fi or instrumental music behind non-fiction. A crackling fire for a fantasy series. Brown noise to keep you focused on a commute.</p>
             </div>
           </div>
         </section>
@@ -375,6 +494,6 @@
 <footer id="site-footer" class="footer band--dark"></footer>
 
 <script src="js/main.js"></script>
-<script src="js/docs.js"></script>
+<script src="js/docs.js?v=3"></script>
 </body>
 </html>

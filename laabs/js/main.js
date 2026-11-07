@@ -12,6 +12,7 @@ async function init() {
   initNavigation();
   initScrollReveal();
   initSmoothScroll();
+  initHeroCarousel();
 }
 
 // Asynchronously load header and footer
@@ -220,6 +221,74 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+/* ── Hero screen carousel ── */
+function initHeroCarousel() {
+  const root = document.getElementById('hero-carousel');
+  if (!root) return;
+
+  const slides = [...root.querySelectorAll('.hero-slide')];
+  const dots = [...root.querySelectorAll('.hero-carousel__dot')];
+  const caption = root.querySelector('[data-carousel-caption]');
+  const count = root.querySelector('[data-carousel-count]');
+  const prevImg = root.querySelector('[data-carousel-prev] img');
+  const nextImg = root.querySelector('[data-carousel-next] img');
+  if (slides.length < 2) return;
+
+  let index = 0;
+  const wrap = (i) => (i + slides.length) % slides.length;
+
+  function show(i) {
+    index = wrap(i);
+    slides.forEach((img, n) => {
+      const active = n === index;
+      img.classList.toggle('is-active', active);
+      img.setAttribute('aria-hidden', String(!active));
+      if (active) img.loading = 'eager';
+    });
+    dots.forEach((dot, n) => {
+      dot.classList.toggle('is-active', n === index);
+      dot.setAttribute('aria-current', n === index ? 'true' : 'false');
+    });
+    caption.textContent = slides[index].dataset.caption;
+    count.textContent = `${index + 1} / ${slides.length}`;
+    if (prevImg) prevImg.src = slides[wrap(index - 1)].getAttribute('src');
+    if (nextImg) nextImg.src = slides[wrap(index + 1)].getAttribute('src');
+  }
+
+  root.querySelectorAll('[data-carousel-step]').forEach((btn) => {
+    btn.addEventListener('click', () => show(index + Number(btn.dataset.carouselStep)));
+  });
+  dots.forEach((dot) => dot.addEventListener('click', () => show(Number(dot.dataset.index))));
+  root.querySelector('[data-carousel-prev]')?.addEventListener('click', () => show(index - 1));
+  root.querySelector('[data-carousel-next]')?.addEventListener('click', () => show(index + 1));
+
+  // Arrow keys: when focus is inside the carousel, or anywhere while the hero is on screen
+  let heroVisible = true;
+  new IntersectionObserver(([entry]) => { heroVisible = entry.isIntersecting; }, { threshold: 0.3 })
+    .observe(root);
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+    const tag = document.activeElement?.tagName;
+    if (tag === 'INPUT' || tag === 'TEXTAREA' || tag === 'SELECT') return;
+    if (!heroVisible && !root.contains(document.activeElement)) return;
+    e.preventDefault();
+    show(index + (e.key === 'ArrowRight' ? 1 : -1));
+  });
+
+  // Swipe on touch screens
+  let startX = null;
+  const stack = root.querySelector('.hero__phone-stack');
+  stack.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; }, { passive: true });
+  stack.addEventListener('touchend', (e) => {
+    if (startX === null) return;
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) show(index + (dx < 0 ? 1 : -1));
+    startX = null;
+  });
+
+  show(0);
 }
 
 // Start execution
